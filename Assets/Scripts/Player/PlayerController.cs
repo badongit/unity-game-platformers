@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         CheckJump();
         CheckLedgeClimb();
         CheckDash();
+        CheckKnockback();
     }
 
     private void FixedUpdate()
@@ -168,6 +169,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool GetDashStatus()
+    {
+        return isDashing;
+    }
+
     public void Knockback(int direction)
     {
         knockback = true;
@@ -177,7 +183,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckKnockback()
     {
-        if(Time.time >= knockbackStartTime + knockbackDuration)
+        if(Time.time >= knockbackStartTime + knockbackDuration && knockback)
         {
             knockback = false;
             rb.velocity = new Vector2(0f, rb.velocity.y);

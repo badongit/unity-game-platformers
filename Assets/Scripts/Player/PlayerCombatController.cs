@@ -10,7 +10,8 @@ public class PlayerCombatController : MonoBehaviour
     private float 
         inputTimer,
         attack1Radius,
-        attack1Damage;
+        attack1Damage,
+        stunDamageAmount = 1f;
 
     [SerializeField] private Transform attack1HitBoxPos;
 
@@ -23,17 +24,19 @@ public class PlayerCombatController : MonoBehaviour
 
     private float lastInputTime = Mathf.NegativeInfinity;
 
-    private float[] attackDetails = new float[2];
+    private AttackDetails attackDetails;
 
     private Animator anim;
 
     private PlayerController PC;
+    private PlayerStats PS;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnabled);
         PC = GetComponent<PlayerController>();
+        PS = GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -84,8 +87,9 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects)
         {
-            attackDetails[0] = attack1Damage;
-            attackDetails[1] = transform.position.x;
+            attackDetails.damageAmount = attack1Damage;
+            attackDetails.position = transform.position;
+            attackDetails.stunDamageAmount = stunDamageAmount;
 
             collider.transform.parent.SendMessage("Damage", attackDetails);
         }
@@ -98,16 +102,24 @@ public class PlayerCombatController : MonoBehaviour
         anim.SetBool("attack1", false);
     }
 
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
-        int direction;
+        if(!PC.GetDashStatus())
+        {
+            int direction;
 
-        if(attackDetails[1] > transform.position.x)
-        {
-            direction = -1;
-        } else
-        {
-            direction = 1;
+            PS.DecreaseHealth(attackDetails.damageAmount);
+
+            if (attackDetails.position.x > transform.position.x)
+            {
+                direction = -1;
+            }
+            else
+            {
+                direction = 1;
+            }
+
+            PC.Knockback(direction);
         }
     }
 
