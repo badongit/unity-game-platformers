@@ -62,8 +62,41 @@
     <Compile Include="Assets\Scripts\Enemies\BasicEnemyController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAfterImageSprite.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Others\CameraController.cs" />
     <Compile Include="Assets\Scripts\Particles\ParticleController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Others\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Enemies\State Machine\State.cs" />
+    <Compile Include="Assets\Scripts\Enemies\State Machine\FiniteStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Enemies\State Machine\Entity.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\IdleState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_IdleState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_Entity.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_IdleState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\Enemy1.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\PlayerDetectedState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_PlayerDetected.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_PlayerDetectedState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\ChargeState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_ChargeState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_ChargeState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\LookForPlayerState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_LookForPlayer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_LookForPlayerState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\AttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AnimationToStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\MeleeAttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_MeleeAttackState.cs" />
+    <Compile Include="Assets\Scripts\Structs\AttackDetails.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_MeleeAttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\StunState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_StunState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_StunState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\DeadState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\States\Data\D_DeadState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_DeadState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -869,6 +902,14 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{C2C1705A-BB2D-2500-5203-3B8D1EBABEB0}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{50A8323F-E20B-CAB5-1071-59367AAE5AC9}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{E61BC37B-11F8-6174-4158-D4421FC79467}</Project>
+      <Name>Cinemachine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
