@@ -9,6 +9,9 @@ TagManager:
   - TargetFire
   - Item
   - ItemHP
+  - dianguc
+  - NextLv
+  - Win
   layers:
   - Default
   - TransparentFX

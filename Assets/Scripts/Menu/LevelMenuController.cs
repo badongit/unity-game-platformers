@@ -8,7 +8,7 @@ public class LevelMenuController : MonoBehaviour
     public void PlayGame()
     {
         
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level1");
         
     }
     public void PlayLevel1()
