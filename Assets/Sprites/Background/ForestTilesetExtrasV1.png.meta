@@ -158,6 +158,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ForestTilesetExtrasV1_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6801b838bacf5524d91d2b08c814f91d
+      internalID: 1004267136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -171,6 +192,7 @@ TextureImporter:
     nameFileIdTable:
       ForestTilesetExtrasV1_0: 243929213
       ForestTilesetExtrasV1_1: 1149645506
+      ForestTilesetExtrasV1_2: -455311749
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

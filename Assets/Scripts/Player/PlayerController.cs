@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform ledgeCheck;
+    [SerializeField] private Transform healthBar;
 
     [SerializeField] private LayerMask whatIsGround;
 
@@ -364,6 +365,7 @@ public class PlayerController : MonoBehaviour
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
+            healthBar.Rotate(0.0f, 180.0f, 0.0f);
         }
        
     }
