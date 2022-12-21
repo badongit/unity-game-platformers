@@ -44,4 +44,12 @@ public class PlayerStats : MonoBehaviour
         GM.Respawn();
         Destroy(gameObject);
     }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("dianguc"))
+        {
+            Die();
+        }
+    }
 }
