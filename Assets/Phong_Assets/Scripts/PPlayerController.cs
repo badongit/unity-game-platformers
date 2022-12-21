@@ -8,11 +8,12 @@ public class PPlayerController : MonoBehaviour
     private BoxCollider2D coll;
     private float dirX = 0f;
     [SerializeField] private LayerMask jumableGround;
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] public float moveSpeed = 7f;
+    [SerializeField] public float jumpForce = 14f;
     void Start()
     {
-        rb= GetComponent<Rigidbody2D>();        
+        rb= GetComponent<Rigidbody2D>();     
+        coll = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class PPlayerController : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGround())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
