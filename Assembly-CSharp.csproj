@@ -124,11 +124,12 @@
     <Compile Include="Assets\Scripts\Enemies\State Machine\Entity.cs" />
     <Compile Include="Assets\Phong_Assets\Scripts\WaypointWolf.cs" />
     <Compile Include="Assets\Phong_Assets\Scripts\TigerController.cs" />
-    <Compile Include="Assets\Scripts\Others\HealthBar.cs" />
+    <Compile Include="Assets\Boss_Run.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_DeadState.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy1\E1_PlayerDetectedState.cs" />
+    <Compile Include="Assets\Sprites\DUng\Scripts\Boss.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Enemies\States\StunState.cs" />
     <Compile Include="Assets\Phong_Assets\Scripts\StickyFlatform.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy2\E2_MoveState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Sprites\DUng\Scripts\New Folder\BossController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy2\E2_IdleState.cs" />
@@ -145,6 +147,7 @@
     <Compile Include="Assets\Scripts\Enemies\States\Data\D_DeadState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy2\E2_DodgeState.cs" />
+    <Compile Include="Assets\Sprites\DUng\Scripts\New Folder\BossMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy2\Enemy2.cs" />
     <Compile Include="Assets\Scripts\Enemies\States\Data\D_IdleState.cs" />
     <Compile Include="Assets\Phong_Assets\Scripts\PPlayerController.cs" />
@@ -161,6 +164,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Structs\AttackDetails.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpecific\Enemy2\E2_RangedAttackState.cs" />
+    <Compile Include="Assets\Sprites\DUng\Health\HealBar.cs" />
+    <Compile Include="Assets\Scripts\Others\HealthBar.cs" />
+    <Compile Include="Assets\Sprites\DUng\Scripts\BossHealth.cs" />
+    <Compile Include="Assets\Sprites\DUng\Scripts\BossWeapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
